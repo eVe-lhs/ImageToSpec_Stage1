@@ -1,0 +1,130 @@
+{
+    "title": "Vertical Grouped Bar Chart",
+    "topo": {
+        "type": "bar",
+        "sub": "vertical"
+    },
+    "legend": {
+        "on": 1
+    },
+    "axes": [{
+        "name": "x_axis",
+        "scl": "categorical",
+        "dom": ["2018", "2019", "2020", "2021"]
+    }, {
+        "name": "y_axis",
+        "lbl": "$-",
+        "scl": "linear",
+        "dom": [0.0, 270000]
+    }],
+    "ser": [{
+        "name": "Canada",
+        "color": "#1e90ff",
+        "y_ref": "y_axis",
+        "data": [
+            [2018, 110000],
+            [2019, 135000],
+            [2020, 95000],
+            [2021, 140000]
+        ],
+        "trend": {
+            "global_trend": "fluctuating",
+            "rate_of_change": "rapid",
+            "intervals": [{
+                "x_range": [2018, 2020],
+                "trend": "peak_then_drop"
+            }, {
+                "x_range": [2020, 2021],
+                "trend": "increase"
+            }]
+        },
+        "stats": {
+            "max_value": 140000,
+            "max_at_the_ref_point": 2021,
+            "min_value": 95000,
+            "min_at_the_ref_point": 2020,
+            "threshold_coverage": {
+                "above_mean": 1,
+                "all_positive": 1,
+                "hits_zero": 0
+            }
+        }
+    }, {
+        "name": "USA",
+        "color": "#ff7f50",
+        "y_ref": "y_axis",
+        "data": [
+            [2018, 230000],
+            [2019, 195000],
+            [2020, 165000],
+            [2021, 220000]
+        ],
+        "trend": {
+            "global_trend": "fluctuating",
+            "rate_of_change": "rapid",
+            "intervals": [{
+                "x_range": [2018, 2020],
+                "trend": "peak_then_drop"
+            }, {
+                "x_range": [2020, 2021],
+                "trend": "increase"
+            }]
+        },
+        "stats": {
+            "max_value": 230000,
+            "max_at_the_ref_point": 2018,
+            "min_value": 165000,
+            "min_at_the_ref_point": 2020,
+            "threshold_coverage": {
+                "above_mean": 1,
+                "all_positive": 1,
+                "hits_zero": 0
+            }
+        }
+    }, {
+        "name": "Mexico",
+        "color": "#a9a9a9",
+        "y_ref": "y_axis",
+        "data": [
+            [2018, 80000],
+            [2019, 95000],
+            [2020, 105000],
+            [2021, 180000]
+        ],
+        "trend": {
+            "global_trend": "monotonic_increase",
+            "rate_of_change": "moderate",
+            "intervals": [{
+                "x_range": [2018, 2020],
+                "trend": "increase"
+            }, {
+                "x_range": [2020, 2021],
+                "trend": "increase"
+            }]
+        },
+        "stats": {
+            "max_value": 180000,
+            "max_at_the_ref_point": 2021,
+            "min_value": 80000,
+            "min_at_the_ref_point": 2018,
+            "threshold_coverage": {
+                "above_mean": 1,
+                "all_positive": 1,
+                "hits_zero": 0
+            }
+        }
+    }],
+    "rel": [{
+        "ref": 2018,
+        "relation": "At ref point 2018, 'USA' has a higher value (230000) than 'Canada' (110000) by 120000.",
+        "ranking": ["USA", "Canada", "Mexico"]
+    }, {
+        "ref": 2020,
+        "relation": "At ref point 2020, 'USA' has a higher value (165000) than 'Canada' (95000) by 70000.",
+        "ranking": ["USA", "Canada", "Mexico"]
+    }, {
+        "ref": 2021,
+        "relation": "At ref point 2021, 'USA' has a higher value (220000) than 'Canada' (140000) by 80000.",
+        "ranking": ["USA", "Canada", "Mexico"]
+    }]
+}
