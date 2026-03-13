@@ -16,4 +16,4 @@ Scatter Plot     100.0%        97.8%          79.2%           75.9%             
 📊 Performance by Complexity:
 ------------------------------------------------------------
 complexity valid_json numerical_accuracy schema_score semantic_score
-   Unknown     100.0%              67.9%        98.1%          33.6%
+   Unknown     100.0%              67.9%        98.1%          33.6% 
