@@ -8,8 +8,5 @@ __pycache__
 env/
 *.zip
 */balanced_images
-*/balanced_images_512
-*/test_images_300
 balanced_images
-balanced_images_512
 test_images_300

@@ -1,5 +1,5 @@
 ============================================================
-🎉 EVALUATION COMPLETE
+🎉 EVALUATION COMPLETE (finetuned model with exact prompt with baseline qwen)
 ============================================================
 📊 Performance by Chart Type:
 ------------------------------------------------------------
