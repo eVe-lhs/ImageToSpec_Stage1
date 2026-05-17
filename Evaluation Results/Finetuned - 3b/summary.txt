@@ -1,0 +1,25 @@
+Starting Phase 2: Evaluating predictions from finetuned_3b.json...
+
+============================================================
+🎉 EVALUATION COMPLETE
+============================================================
+📊 Performance by Chart Type:
+------------------------------------------------------------
+  chart_type valid_json schema_score topology_score domain_accuracy numerical_accuracy categorical_accuracy math_accuracy semantic_score
+  Area Chart      92.5%        91.2%          82.5%           83.5%              75.9%               100.0%           N/A          59.6%
+   Bar Chart      80.0%        77.7%          56.0%           87.3%              84.2%                96.9%           N/A          57.9%
+    Box Plot      92.3%        89.7%          76.9%           87.3%              70.4%                96.4%           N/A          53.6%
+   Histogram      88.9%        88.9%          88.9%           87.5%              49.8%                  N/A           N/A          45.0%
+  Line Chart      97.3%        91.9%          92.0%           74.7%              79.4%                94.9%          0.0%          61.1%
+   Pie Chart     100.0%       100.0%         100.0%             N/A              97.4%                  N/A           N/A            N/A
+Scatter Plot     100.0%        98.7%          90.6%           83.9%              80.6%                93.8%           N/A            N/A
+     OVERALL      93.4%        90.8%          82.9%           81.7%              79.8%                96.2%          0.0%          58.7%
+
+📊 Performance by Complexity:
+------------------------------------------------------------
+complexity valid_json numerical_accuracy schema_score semantic_score
+      High      88.0%              79.7%        85.9%          61.4%
+       Low      98.6%              86.9%        96.1%          50.8%
+    Medium      97.1%              73.2%        93.5%          59.9%
+
+📁 Full detailed metrics saved to: finetuned_3b.csv

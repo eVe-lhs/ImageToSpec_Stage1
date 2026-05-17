@@ -1,0 +1,63 @@
+{
+    "title": "Intelligent Traffic Monitoring",
+    "topo": {
+        "type": "box",
+        "sub": "horizontal"
+    },
+    "legend": {
+        "on": false
+    },
+    "axes": [{
+        "name": "x_axis",
+        "lbl": "Vehicle Detection",
+        "scl": "categorical",
+        "dom": ["Vehicle Detection", "Traffic Signal Control", "Emergency Response", "Public Transport Priority"]
+    }, {
+        "name": "y_axis",
+        "lbl": "Value",
+        "scl": "linear",
+        "dom": [0, 750]
+    }],
+    "ser": [{
+        "name": "Vehicle Detection",
+        "color": "#00FF00",
+        "y_ref": "y_axis",
+        "data": [
+            ["Vehicle Detection", 400, 100, 300, 500, 650],
+            ["Traffic Signal Control", 250, 150, 300, 450, 600],
+            ["Emergency Response", 200, 100, 300, 400, 500],
+            ["Public Transport Priority", 250, 150, 300, 400, 550]
+        ],
+        "trend": {
+            "global_trend": "fluctuating",
+            "rate_of_change": "moderate",
+            "intervals": [{
+                "x_range": ["Vehicle Detection", "Traffic Signal Control"],
+                "trend": "increasing"
+            }, {
+                "x_range": ["Traffic Signal Control", "Emergency Response"],
+                "trend": "decreasing"
+            }, {
+                "x_range": ["Emergency Response", "Public Transport Priority"],
+                "trend": "increasing"
+            }]
+        },
+        "stats": {
+            "max_value": 650,
+            "max_at_the_ref_point": "Vehicle Detection",
+            "min_value": 100,
+            "min_at_the_ref_point": "Emergency Response",
+            "threshold_coverage": {
+                "above_mean": true,
+                "all_positive": true,
+                "hits_zero": false
+            },
+            "crossing_points": []
+        }
+    }],
+    "rel": [{
+        "relation_type": "global_maximums_y_axis",
+        "description": "The maximum value across all categories is 650.",
+        "ranking": ["Vehicle Detection"]
+    }]
+}

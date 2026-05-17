@@ -1,130 +1,142 @@
 {
-    "title": "Vertical Grouped Bar Chart",
+    "title": "Distribution of Users Across Data Science Platforms by Skill Level",
     "topo": {
-        "type": "bar",
-        "sub": "vertical"
+        "type": "histogram",
+        "sub": "standard"
     },
     "legend": {
         "on": 1
     },
     "axes": [{
         "name": "x_axis",
-        "scl": "categorical",
-        "dom": ["2018", "2019", "2020", "2021"]
+        "lbl": "Skill Level",
+        "scl": "linear",
+        "dom": [1250, 10275]
     }, {
         "name": "y_axis",
-        "lbl": "$-",
+        "lbl": "Number of Users",
         "scl": "linear",
-        "dom": [0.0, 270000]
+        "dom": [0.0, 1.05]
     }],
     "ser": [{
-        "name": "Canada",
-        "color": "#1e90ff",
+        "name": "Kaggle",
+        "color": "#6b8e23",
         "y_ref": "y_axis",
         "data": [
-            [2018, 110000],
-            [2019, 135000],
-            [2020, 95000],
-            [2021, 140000]
+            [1500, 1700, 0.95],
+            [1700, 1900, 0.85],
+            [1900, 2100, 0.75],
+            [2100, 2300, 0.65],
+            [2300, 2500, 0.55],
+            [2500, 2700, 0.45],
+            [2700, 2900, 0.35],
+            [2900, 3100, 0.25],
+            [3100, 3300, 0.15],
+            [3300, 3500, 0.05]
         ],
-        "trend": {
-            "global_trend": "fluctuating",
-            "rate_of_change": "rapid",
-            "intervals": [{
-                "x_range": [2018, 2020],
-                "trend": "peak_then_drop"
-            }, {
-                "x_range": [2020, 2021],
-                "trend": "increase"
-            }]
-        },
+        "ds": 0,
+        "is_subsampled": 0,
+        "critical_points_retained": 1,
         "stats": {
-            "max_value": 140000,
-            "max_at_the_ref_point": 2021,
-            "min_value": 95000,
-            "min_at_the_ref_point": 2020,
-            "threshold_coverage": {
-                "above_mean": 1,
-                "all_positive": 1,
-                "hits_zero": 0
-            }
+            "modal_bin": [1500, 1700],
+            "max_frequency": 0.95
         }
     }, {
-        "name": "USA",
-        "color": "#ff7f50",
+        "name": "DataRobot",
+        "color": "#7fff00",
         "y_ref": "y_axis",
         "data": [
-            [2018, 230000],
-            [2019, 195000],
-            [2020, 165000],
-            [2021, 220000]
+            [3500, 3700, 0.9],
+            [3700, 3900, 0.8],
+            [3900, 4100, 0.7],
+            [4100, 4300, 0.6],
+            [4300, 4500, 0.5],
+            [4500, 4700, 0.4],
+            [4700, 4900, 0.3],
+            [4900, 5100, 0.2],
+            [5100, 5300, 0.1],
+            [5300, 5500, 0.05]
         ],
-        "trend": {
-            "global_trend": "fluctuating",
-            "rate_of_change": "rapid",
-            "intervals": [{
-                "x_range": [2018, 2020],
-                "trend": "peak_then_drop"
-            }, {
-                "x_range": [2020, 2021],
-                "trend": "increase"
-            }]
-        },
+        "ds": 0,
+        "is_subsampled": 0,
+        "critical_points_retained": 1,
         "stats": {
-            "max_value": 230000,
-            "max_at_the_ref_point": 2018,
-            "min_value": 165000,
-            "min_at_the_ref_point": 2020,
-            "threshold_coverage": {
-                "above_mean": 1,
-                "all_positive": 1,
-                "hits_zero": 0
-            }
+            "modal_bin": [3500, 3700],
+            "max_frequency": 0.9
         }
     }, {
-        "name": "Mexico",
-        "color": "#a9a9a9",
+        "name": "Dataiku",
+        "color": "#f0f8ff",
         "y_ref": "y_axis",
         "data": [
-            [2018, 80000],
-            [2019, 95000],
-            [2020, 105000],
-            [2021, 180000]
+            [5700, 5900, 0.9],
+            [5900, 6100, 0.8],
+            [6100, 6300, 0.7],
+            [6300, 6500, 0.6],
+            [6500, 6700, 0.5],
+            [6700, 6900, 0.4],
+            [6900, 7100, 0.3],
+            [7100, 7300, 0.2],
+            [7300, 7500, 0.1],
+            [7500, 7700, 0.05]
         ],
-        "trend": {
-            "global_trend": "monotonic_increase",
-            "rate_of_change": "moderate",
-            "intervals": [{
-                "x_range": [2018, 2020],
-                "trend": "increase"
-            }, {
-                "x_range": [2020, 2021],
-                "trend": "increase"
-            }]
-        },
+        "ds": 0,
+        "is_subsampled": 0,
+        "critical_points_retained": 1,
         "stats": {
-            "max_value": 180000,
-            "max_at_the_ref_point": 2021,
-            "min_value": 80000,
-            "min_at_the_ref_point": 2018,
-            "threshold_coverage": {
-                "above_mean": 1,
-                "all_positive": 1,
-                "hits_zero": 0
-            }
+            "modal_bin": [5700, 5900],
+            "max_frequency": 0.9
         }
-    }],
-    "rel": [{
-        "ref": 2018,
-        "relation": "At ref point 2018, 'USA' has a higher value (230000) than 'Canada' (110000) by 120000.",
-        "ranking": ["USA", "Canada", "Mexico"]
     }, {
-        "ref": 2020,
-        "relation": "At ref point 2020, 'USA' has a higher value (165000) than 'Canada' (95000) by 70000.",
-        "ranking": ["USA", "Canada", "Mexico"]
+        "name": "Azure ML",
+        "color": "#7fffd4",
+        "y_ref": "y_axis",
+        "data": [
+            [7900, 8100, 0.9],
+            [8100, 8300, 0.8],
+            [8300, 8500, 0.7],
+            [8500, 8700, 0.6],
+            [8700, 8900, 0.5],
+            [8900, 9100, 0.4],
+            [9100, 9300, 0.3],
+            [9300, 9500, 0.2],
+            [9500, 9700, 0.1],
+            [9700, 9900, 0.05]
+        ],
+        "ds": 0,
+        "is_subsampled": 0,
+        "critical_points_retained": 1,
+        "stats": {
+            "modal_bin": [7900, 8100],
+            "max_frequency": 0.9
+        }
     }, {
-        "ref": 2021,
-        "relation": "At ref point 2021, 'USA' has a higher value (220000) than 'Canada' (140000) by 80000.",
-        "ranking": ["USA", "Canada", "Mexico"]
+        "name": "Google Cloud AI",
+        "color": "#b8860b",
+        "y_ref": "y_axis",
+        "data": [
+            [9100, 9300, 0.9],
+            [9300, 9500, 0.8],
+            [9500, 9700, 0.7],
+            [9700, 9900, 0.6],
+            [9900, 10100, 0.5],
+            [10100, 10300, 0.4],
+            [10300, 10500, 0.3],
+            [10500, 10700, 0.2],
+            [10700, 10900, 0.1],
+            [10900, 11100, 0.05]
+        ],
+        "ds": 0,
+        "is_subsampled": 0,
+        "critical_points_retained": 1,
+        "stats": {
+            "modal_bin": [9100, 9300],
+            "max_frequency": 0.9
+        }
     }]
+}], "rel": [{
+    "relation_type": "global_median_difference",
+    "description": "Category 'Google Cloud AI' has the highest median (9900), leading the lowest category 'Dataiku' (5700) by 4200.",
+    "ranking": ["Google Cloud AI", "Azure ML", "DataRobot", "Kaggle", "Dataiku"]
+}]
 }
